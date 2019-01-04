@@ -1,0 +1,4 @@
+ctags:
+    run `ctags -R --c-kinds=+p` in source directory
+    g] to jump to tag
+    
