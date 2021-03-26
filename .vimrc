@@ -23,8 +23,7 @@ map <C-H> :tabprevious<CR>
 map <C-L> :tabnext<CR>
 
 " make/make run (move to first tab and open cwindow)
-map <F5> :tabfirst<CR>:copen<CR>make -j<CR>
-map <C-F5> :tabfirst<CR>:copen<CR>make -j run<CR>
+map <F5> :tabfirst<CR>:copen<CR>:make -j<CR>
 
 " previous/next error in cwindow
 map <C-J> :cnext<CR>
