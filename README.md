@@ -10,7 +10,7 @@
 * `g ]` to jump to tag currently under cursor with selection window
 * `CTRL-]` to directly jump to tag currently under cursor
 * `CTRL-w ]` like `g ]` but open file with tag in horizontal split
-* CTRL-t to move back in tag stack
+* `CTRL-t` to move back in tag stack
 
 ## Search:
 * `/keyword` to search for `keyword`
