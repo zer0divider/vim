@@ -1,6 +1,9 @@
 .PHONY: install
 install:
 	cp .vimrc ~/.vimrc
-	mkdir ~/.vim -p
-	cp -r syntax ~/.vim/syntax
+	mkdir -p ~/.vim
+	mkdir -p ~/.vim/syntax
+	mkdir -p ~/.vim/plugin
+	cp -r syntax/* ~/.vim/syntax/
+	cp -r plugin/* ~/.vim/plugin/
 
