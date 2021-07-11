@@ -5,12 +5,17 @@
 * install `.vimrc` and plugins by running `make` from this folder
 
 ## ctags:
-* run `ctags -R --c-kinds=+p <library-directories>` in source directory to create tags-file
-* `:tag <tag>` to search for a given tag
+* run `ctags -R --c-kinds=+p <library-directories>` in source directory to create tags-file. IMPORTANT: flag `--c-kinds=+p` needs to be set BEFORE library directories.
+* `:tag <tag>` to search for a given tag (first match)
+* `:tselect <tag>` to search for a given tag (selection window)
 * `g ]` to jump to tag currently under cursor with selection window
 * `CTRL-]` to directly jump to tag currently under cursor
-* `CTRL-w ]` like `g ]` but open file with tag in horizontal split
+* `CTRL-w ]` like `CTRL-w ]` but open file with tag in horizontal split
+* `CTRL-w g ]` like `g ]` but open file with tag in horizontal split
 * `CTRL-t` to move back in tag stack
+* for all the commands above: use `... g CTRL-]` instead of `... g ]` to jump directly to tag if only one is defined or open tag selection window if multiple definitions
+* for all the commands above: use `CTRL-w ... }` instead of `CTRL-w ... ]` to open file with matching tag in preview window
+* preferred way to open tag: `CTRL-w g }` (open tag in preview, selection window only if multiple definitions)
 
 ## Search:
 * `/keyword` to search for `keyword`
@@ -54,7 +59,11 @@
 * `:IHT` new tab and switches
 * `:IHN` cycles through matches 
 
+## vimrc specific hotkeys
+* TAB to open explorer in new tab
+* Shift-TAB to open explorer in split view
 
 ## Other stuff:
 * `:set number` to show line numbers
 * when currently entering command (`:...`) `CTRL-r CTRL-w` copy current word under cursor into command line
+
