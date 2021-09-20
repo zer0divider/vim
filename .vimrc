@@ -9,6 +9,13 @@ syntax on
 " activate mouse support
 set mouse=a
 
+" automatically refresh files not written by vim
+set autoread
+au FocusGained,BufEnter * :checktime
+
+" wildmenu
+set wildmenu
+
 " support arm-assembly syntax
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 
