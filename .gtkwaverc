@@ -1,0 +1,17 @@
+disable_mouseover 0
+splash_disable 1
+highlight_wavewindow 1
+color_back 101010
+color_dashfill 0e9876
+color_1fill 044747
+color_0 0e9876
+color_1 0e9876
+color_vbox 0e9876
+color_vtrans 0e9876
+color_trans 0e9876
+color_white 000000
+color_ltgray 303030
+color_mdgray 202020
+color_black FFFFFF
+use_big_fonts 1
+fill_waveform 1
