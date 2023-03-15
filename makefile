@@ -10,4 +10,4 @@ install:
 	cp -r plugin/* ~/.vim/plugin/
 	cp -r indent/* ~/.vim/indent/
 	cp -r ftdetect/* ~/.vim/ftdetect/
-
+	cp .gtkwaverc ~/.gtkwaverc
