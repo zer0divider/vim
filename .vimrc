@@ -1,3 +1,6 @@
+" plugins
+set runtimepath^=~/.vim/bundle/vim-easy-align
+
 " setting tab indentation
 set tabstop=4
 set shiftwidth=4
@@ -44,4 +47,10 @@ nnoremap <C-K> :cprev<CR>
 nnoremap <TAB> :Texplore<CR>
 nnoremap <S-TAB> :Vexplore<CR>
 
+" mappings for plugins
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)EasyAlign
 
