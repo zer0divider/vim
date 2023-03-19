@@ -9,9 +9,12 @@ set smartindent
 " syntax highlighting
 highlight uasmComment ctermfg=darkgrey
 highlight cComment ctermfg=darkgrey
+highlight makeComment ctermfg=darkgrey
 highlight verilogComment ctermfg=darkgrey
+highlight pythonComment ctermfg=darkgrey
 highlight vimComment ctermfg=darkgrey
 highlight String ctermfg=red
+highlight visual ctermbg=black
 syntax enable
 
 " activate mouse support
@@ -40,8 +43,8 @@ nnoremap <C-H> :tabprevious<CR>
 nnoremap <C-L> :tabnext<CR>
 
 " previous/next error in cwindow
-nnoremap <C-J> :cnext<CR>
-nnoremap <C-K> :cprev<CR>
+nnoremap <C-J> :cnext<CR>zz
+nnoremap <C-K> :cprev<CR>zz
 
 " open new tab
 nnoremap <TAB> :Texplore<CR>
@@ -54,3 +57,13 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)EasyAlign
 
+" run make
+nnoremap <F5> :make<CR>
+
+" highlight current line
+" NOTE: deactivated because it breaks other highlights (e.g. 'TODO')
+" set cursorline
+" highlight CursorLine cterm=None ctermbg=black
+
+" no swap files
+set noswapfile
