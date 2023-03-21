@@ -15,6 +15,7 @@ install: $(plugin_dir) $(addprefix $(plugin_dir)/,$(plugins))
 	mkdir -p ~/.vim/plugin
 	mkdir -p ~/.vim/indent
 	mkdir -p ~/.vim/ftdetect
+	cp -r after ~/.vim/
 	cp -r syntax/* ~/.vim/syntax/
 	cp -r plugin/* ~/.vim/plugin/
 	cp -r indent/* ~/.vim/indent/

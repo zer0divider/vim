@@ -14,6 +14,7 @@ highlight verilogComment ctermfg=darkgrey
 highlight pythonComment ctermfg=darkgrey
 highlight vimComment ctermfg=darkgrey
 highlight String ctermfg=red
+highlight Search ctermfg=darkblue
 highlight visual ctermbg=black
 syntax enable
 
