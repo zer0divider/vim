@@ -13,6 +13,7 @@ highlight makeComment ctermfg=darkgrey
 highlight verilogComment ctermfg=darkgrey
 highlight pythonComment ctermfg=darkgrey
 highlight vimComment ctermfg=darkgrey
+highlight texComment ctermfg=darkgrey
 highlight String ctermfg=red
 highlight Search ctermfg=darkblue
 highlight visual ctermbg=black
@@ -64,7 +65,7 @@ nnoremap <F5> :make<CR>
 " highlight current line
 " NOTE: deactivated because it breaks other highlights (e.g. 'TODO')
 " set cursorline
-" highlight CursorLine cterm=None ctermbg=black
+highlight CursorLine cterm=None ctermbg=black
 
 " no swap files
 set noswapfile
