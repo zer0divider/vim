@@ -7,7 +7,7 @@ set shiftwidth=4
 set smartindent
 
 " syntax highlighting
-highlight uasmComment ctermfg=darkgrey
+highlight UASM_comment ctermfg=darkgrey
 highlight cComment ctermfg=darkgrey
 highlight makeComment ctermfg=darkgrey
 highlight verilogComment ctermfg=darkgrey
@@ -49,8 +49,10 @@ nnoremap <C-J> :cnext<CR>zz
 nnoremap <C-K> :cprev<CR>zz
 
 " open new tab
-nnoremap <TAB> :Texplore<CR>
 nnoremap <S-TAB> :Vexplore<CR>
+nnoremap <TAB> :Texplore<CR>
+nnoremap <S-E> :Explore<CR>
+
 
 " mappings for plugins
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -59,8 +61,14 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)EasyAlign
 
-" run make
-nnoremap <F5> :make<CR>
+" store last visited tab
+au TabLeave * let g:lasttab = tabpagenr()
+
+" go back to previously visited tab (e.g. after done quick fixing in first tab)
+nnoremap <silent> <F6> :exe "tabn ".g:lasttab<CR>
+
+" run make -> assumes that first tab contains quick fix window
+nnoremap <silent> <F5> :tabfirst<CR>:make<CR>
 
 " highlight current line
 " NOTE: deactivated because it breaks other highlights (e.g. 'TODO')
